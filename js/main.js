@@ -21,6 +21,7 @@
                 position: 'bottom',
                 closeTimeout: 3000
             });
+            toasts.open();
             vibration();
             app.dialog.close();
         },
