@@ -14,7 +14,7 @@ env = "locals";
 var base_url;
 
 let crossDomain = true;
-let ajaxTimeOut = 4500;
+let ajaxTimeOut = 45000;
 let jsonType = "json";
 
 if(env == "local"){

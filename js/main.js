@@ -16,6 +16,8 @@
             'load_all_news': 'yes'
         },
         error: function (er) {
+            /*console.log(er);
+            console.log(er.responseText);*/
             var toasts = app.toast.create({
                 text: 'Network error, please try again later!',
                 position: 'bottom',
@@ -26,10 +28,13 @@
             app.dialog.close();
         },
         success: function (f) {
+            console.log(f);
             app.dialog.close();
             let all_news = f;
             let all_news_string = JSON.stringify(all_news);
             sessionStorage.setItem("all_news",all_news_string);
+
+            parse_news();
         }
     });
   }

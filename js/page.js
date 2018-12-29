@@ -203,17 +203,15 @@ $$(document).on('page:init', '.page[data-name="register"]', function (e) {
 
 
 $$(document).on('page:init', '.page[data-name="news-home"]', function (e) {
-    console.log("We dey here...");
+    //console.log("We dey here...");
 
     //check if there is any news
 
     let all_news = sessionStorage.getItem("all_news");
-    console.log(all_news);
+    //console.log(all_news);
     if(all_news == "" || all_news == null){
         app.dialog.preloader('Please wait, while load recent news!');
-        if(load_news()){
-            parse_news();
-        }
+        load_news();
         //app.dialog.close();
     }else{
         parse_news();
